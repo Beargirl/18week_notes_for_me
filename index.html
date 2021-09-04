@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="my_notes">
+
+    <h1 class="title">Мои заметки</h1>
+
+    <h2 class="text">Дата</h2>
+    <input type="date" id="date" required> <br>
+
+    <h2 class="text">Название</h2>
+    <input type="text" id="name" required> <br>
+
+    <h2 class="text">Текст</h2>
+    <textarea name="note" cols="30" rows="10" id="note_text" required></textarea> <br>
+
+    <button onclick="saveNote()">Сохранить заметочку</button>
+
+
+    <style>
+        .my_notes {
+            background-color: violet;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 3em;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        input {
+            margin-left: 45em;
+            margin-right: 45em;
+        }
+
+        input:invalid {
+            border: 2px red;
+        }
+
+        input:invalid:required {
+            background-image: linear-gradient(to right, red, grey);
+        }
+
+        input:valid {
+            border: 2px solid green;
+        }
+
+        .text {
+            color: whitesmoke;
+            text-align: center;
+
+        }
+
+        textarea {
+            margin-left: 20em;
+            margin-right: 20em;
+        }
+
+        textarea:invalid {
+            border: 2px red;
+        }
+
+        textarea:invalid:required {
+            background-image: linear-gradient(to right, red, grey);
+        }
+
+        button {
+            width: 15em;
+            height: 4em;
+            border-radius: 1em;
+            background-color: linen;
+            margin-left: 45em;
+
+        }
+    </style>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
